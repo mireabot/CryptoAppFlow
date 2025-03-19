@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct WalletDashboard: View {
-    @StateObject private var walletService = WalletService()
+    @EnvironmentObject private var walletService: WalletService
+    @EnvironmentObject private var swapService: SwapService
     @State private var selectedAssetType: AssetSegmentType = .all
     @State private var showSendFlow = false
+    @State private var showSwapFlow = false
     var body: some View {
         NavigationView {
             ScrollView {
@@ -28,7 +30,9 @@ struct WalletDashboard: View {
                         ActionButton(icon: Image(systemName: "arrow.up"), title: "Send") {
                             showSendFlow = true
                         }
-                        ActionButton(icon: Image(systemName: "arrow.left.arrow.right"), title: "Swap") {}
+                        ActionButton(icon: Image(systemName: "arrow.left.arrow.right"), title: "Swap") {
+                            showSwapFlow = true
+                        }
                         ActionButton(icon: Image(systemName: "creditcard"), title: "Buy") {}
                     }
                     
@@ -50,6 +54,11 @@ struct WalletDashboard: View {
                 SendFlowView(isPresented: $showSendFlow)
                     .environmentObject(walletService)
             }
+            .floatingSheet(isPresented: $showSwapFlow) {
+                SwapFlowView()
+                    .environmentObject(walletService)
+                    .environmentObject(swapService)
+            }
         }
     }
 }
@@ -57,4 +66,6 @@ struct WalletDashboard: View {
 #Preview {
     WalletDashboard()
         .preferredColorScheme(.dark)
+        .environmentObject(WalletService())
+        .environmentObject(SwapService(walletService: WalletService()))
 }

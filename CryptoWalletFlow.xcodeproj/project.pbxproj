@@ -27,6 +27,11 @@
 		359A769B2D8477F8008E11F9 /* ContractDetailsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A769A2D8477F8008E11F9 /* ContractDetailsEntry.swift */; };
 		359A769D2D847D0C008E11F9 /* ContractSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A769C2D847D0C008E11F9 /* ContractSummary.swift */; };
 		359A769F2D847E71008E11F9 /* HoldToSendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A769E2D847E71008E11F9 /* HoldToSendButton.swift */; };
+		35DFBCDB2D8B0856002A9C01 /* SwapTextFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFBCDA2D8B0856002A9C01 /* SwapTextFieldRow.swift */; };
+		35DFBCDD2D8B09E7002A9C01 /* SwapAssetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFBCDC2D8B09E7002A9C01 /* SwapAssetSelection.swift */; };
+		35DFBCDF2D8B281A002A9C01 /* SwapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFBCDE2D8B281A002A9C01 /* SwapService.swift */; };
+		35DFBCE12D8B28B7002A9C01 /* SwapEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFBCE02D8B28B7002A9C01 /* SwapEntry.swift */; };
+		35DFBCE32D8B4165002A9C01 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DFBCE22D8B4165002A9C01 /* NumericKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		359A769A2D8477F8008E11F9 /* ContractDetailsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDetailsEntry.swift; sourceTree = "<group>"; };
 		359A769C2D847D0C008E11F9 /* ContractSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractSummary.swift; sourceTree = "<group>"; };
 		359A769E2D847E71008E11F9 /* HoldToSendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldToSendButton.swift; sourceTree = "<group>"; };
+		35DFBCDA2D8B0856002A9C01 /* SwapTextFieldRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapTextFieldRow.swift; sourceTree = "<group>"; };
+		35DFBCDC2D8B09E7002A9C01 /* SwapAssetSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapAssetSelection.swift; sourceTree = "<group>"; };
+		35DFBCDE2D8B281A002A9C01 /* SwapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapService.swift; sourceTree = "<group>"; };
+		35DFBCE02D8B28B7002A9C01 /* SwapEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapEntry.swift; sourceTree = "<group>"; };
+		35DFBCE22D8B4165002A9C01 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 			children = (
 				35691C2C2D7F445C00FB9AF2 /* CustomSheet.swift */,
 				359A76932D847309008E11F9 /* SendFlow.swift */,
+				35DFBCE22D8B4165002A9C01 /* NumericKeyboard.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -81,6 +92,7 @@
 				359A76892D846D0D008E11F9 /* ActionButton.swift */,
 				359A768B2D846D8E008E11F9 /* AssetsSegmentControl.swift */,
 				359A769E2D847E71008E11F9 /* HoldToSendButton.swift */,
+				35DFBCDA2D8B0856002A9C01 /* SwapTextFieldRow.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -90,6 +102,7 @@
 			children = (
 				359A768D2D846F62008E11F9 /* WalletService.swift */,
 				359A768F2D84705D008E11F9 /* ContractService.swift */,
+				35DFBCDE2D8B281A002A9C01 /* SwapService.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 		35691C2B2D7F444C00FB9AF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35DFBCD92D8B0832002A9C01 /* SwapFlow */,
 				359A76952D8473D1008E11F9 /* SendFlow */,
 				359A76912D8470EE008E11F9 /* WalletDashboard.swift */,
 			);
@@ -161,6 +175,15 @@
 				359A769C2D847D0C008E11F9 /* ContractSummary.swift */,
 			);
 			path = SendFlow;
+			sourceTree = "<group>";
+		};
+		35DFBCD92D8B0832002A9C01 /* SwapFlow */ = {
+			isa = PBXGroup;
+			children = (
+				35DFBCDC2D8B09E7002A9C01 /* SwapAssetSelection.swift */,
+				35DFBCE02D8B28B7002A9C01 /* SwapEntry.swift */,
+			);
+			path = SwapFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,17 +262,22 @@
 				359A76862D8469B7008E11F9 /* AssetRow.swift in Sources */,
 				356A833C2D7E79B6000F3FB2 /* CryptoWalletFlowApp.swift in Sources */,
 				359A76922D8470EE008E11F9 /* WalletDashboard.swift in Sources */,
+				35DFBCE32D8B4165002A9C01 /* NumericKeyboard.swift in Sources */,
 				359A76942D847309008E11F9 /* SendFlow.swift in Sources */,
 				359A769F2D847E71008E11F9 /* HoldToSendButton.swift in Sources */,
 				359A768C2D846D8E008E11F9 /* AssetsSegmentControl.swift in Sources */,
 				359A769D2D847D0C008E11F9 /* ContractSummary.swift in Sources */,
 				35691C302D7F48B400FB9AF2 /* Asset.swift in Sources */,
+				35DFBCDB2D8B0856002A9C01 /* SwapTextFieldRow.swift in Sources */,
+				35DFBCDD2D8B09E7002A9C01 /* SwapAssetSelection.swift in Sources */,
 				359A768E2D846F62008E11F9 /* WalletService.swift in Sources */,
 				35691C322D7F48C800FB9AF2 /* Contract.swift in Sources */,
 				359A769B2D8477F8008E11F9 /* ContractDetailsEntry.swift in Sources */,
 				35691C2D2D7F445C00FB9AF2 /* CustomSheet.swift in Sources */,
 				359A76992D8475FF008E11F9 /* AssetSelection.swift in Sources */,
 				359A76972D8473E0008E11F9 /* RecipientsSelection.swift in Sources */,
+				35DFBCE12D8B28B7002A9C01 /* SwapEntry.swift in Sources */,
+				35DFBCDF2D8B281A002A9C01 /* SwapService.swift in Sources */,
 				359A768A2D846D0D008E11F9 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
